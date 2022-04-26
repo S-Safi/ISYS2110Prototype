@@ -1,6 +1,8 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Trebuchet MS', sans-serif;
+    background-color: #e7f2f8;
   }
 
 ul {
@@ -8,11 +10,12 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: rgb(2, 107, 35);
+    background-color: rgb(9, 139, 50);
   }
   
   li {
     float: left;
+    background-color: rgb(9, 139, 50);
   }
   
   li a {
@@ -21,6 +24,7 @@ ul {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    background-color: rgb(9, 139, 50);
   }
   
   /* Change the link color to #111 (black) on hover */
@@ -39,12 +43,12 @@ ul {
       margin-top: 0.67em;
       margin-bottom: 0.67em;
       text-align: center;
-      font-family: "Comic Sans Ms";
   }
 
   h2, p {
     margin-top: 0.67em;
     margin-bottom: 0.67em;
-    font-family: "Comic Sans Ms";
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
