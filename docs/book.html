@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>BestMates Paradise</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="login.html">Login/Signup</a></li>
+        <li><a href="index.html">Contact</a></li>
+        <li><a href="aboutus.html">About</a></li>
+        <li><a href="book.html">Book</a></li>
+        <li><a href="Plans.html">Plans</a></li>
+    </ul>
+    <h1>BestMates Paradise</h1>
+    <img src="./IMG_0086.jpg" style="width:250px;" class="center">
+    <br>
+    <br>
+    <div style="text-align: center;">
+        <h2>Make a booking</h2>
+        <form action="/action_page.php">
+            <label for="petname">Pet name: </label>
+            <input type="text" id="petname" name="petname"><br><br>
+            <label for="species">Species: &nbsp;&nbsp;</label>
+            <input type="text" id="species" name="species"><br><br>
+            <label for="start">Start date: </label>
+            <input type="date" id="start" name="start">
+            <label for="end">End date: </label>
+            <input type="date" id="end" name="end">
+            <br><br>
+            <label for="plan">Choose a plan:</label>
+            <select id="plan" name="plan">
+                <option value="plan1">Gold Plan</option>
+                <option value="plan2">Silver Plan</option>
+                <option value="plan3">Bronze Plan</option>
+                <option value="plan4">Honestly ur too poor if u dont chose from the ones above (plastic plan)</option>
+            </select>
+            <br><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+</body>
+
+</html>
