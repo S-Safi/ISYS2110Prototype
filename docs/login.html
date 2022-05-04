@@ -4,19 +4,24 @@
 <head>
     <title>BestMates Paradise</title>
     <link rel="stylesheet" href="main.css">
+    <link rel="icon" href="./img.png">
 </head>
 
 <body>
-    <ul>
-        <li><a href="index.html" class="active">Home</a></li>
+    <ul style="position:absolute; left:0; top:0; width:100%;">
+        <li><a href="index.html">Home</a></li>
         <li><a href="login.html">Login/Signup</a></li>
-        <li><a href="index.html">Contact</a></li>
+        <li><a href="contactus.html">Contact</a></li>
         <li><a href="aboutus.html">About</a></li>
-        <li><a href="book.html">Book</a></li>
+        <li><a href="faq.html">FAQ's and Sitemap</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
         <li><a href="Plans.html">Plans</a></li>
+        <li><a href="book.html">Book</a></li>
     </ul>
-    <h1>Welcome to BestMates Paradise</h1>
-    <img src="./IMG_0086.jpg" style="width:250px;" class="center">
+    <br>
+    <br>
+    <h1>BestMates Paradise</h1>
+    <img src="./img.png" style="width:250px;" class="center">
     <br>
     <div style="text-align: center;">
         <h2>Please log in!</h2>
@@ -24,8 +29,20 @@
         <input type="text" id="uname" name="uname"><br><br>
         <label for="pword">Password: &nbsp;</label>
         <input type="password" id="pword" name="pword"><br><br>
-        <button type="button">Login</button>
+        <button type="button" onclick="checkLogin()">Login</button>
     </div>
+    <script>
+        function checkLogin() {
+            if (!document.getElementById("uname").value) {
+                alert("No Username Specified");
+            } else if (!document.getElementById("pword").value) {
+                alert("No Password given");
+            } else {
+                alert("Logged in succesfully");
+                window.location.href = "./index.html";
+            }
+        }
+    </script>
 </body>
 
 </html>

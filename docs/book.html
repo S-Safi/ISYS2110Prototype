@@ -4,39 +4,81 @@
 <head>
     <title>BestMates Paradise</title>
     <link rel="stylesheet" href="main.css">
+    <link rel="icon" href="./img.png">
+    <script>
+        function writeToLocalStorage() {
+            var petName = document.getElementById("petname");
+            var species = document.getElementById("species");
+            var start = document.getElementById("start");
+            var end = document.getElementById("end");
+            var plan = document.getElementById("plan");
+            if (!petName.value) {
+                alert("Must have a pet name");
+                return false;
+            }
+            if (!species.value) {
+                alert("Must specify species");
+                return false;
+            }
+            if (!start.value) {
+                alert("Must specify start date");
+                return false;
+            }
+            if (!end.value) {
+                alert("Must specify end date");
+                return false;
+            }
+            if (!plan.value) {
+                alert("Must specify plan");
+                return false;
+            }
+            if ((new Date(start.value).getDate) > (new Date(end.value).getDate)) {
+                alert("Start date cannot be after end date");
+                return false;
+            }
+            localStorage.setItem("petName", petName.value);
+            localStorage.setItem("species", species.value);
+            localStorage.setItem("start", start.value);
+            localStorage.setItem("end", end.value);
+            localStorage.setItem("plan", plan.value);
+        }
+    </script>
 </head>
 
 <body>
-    <ul>
-        <li><a href="index.html" class="active">Home</a></li>
+    <ul style="position:absolute; left:0; top:0; width:100%;">
+        <li><a href="index.html">Home</a></li>
         <li><a href="login.html">Login/Signup</a></li>
-        <li><a href="index.html">Contact</a></li>
+        <li><a href="contactus.html">Contact</a></li>
         <li><a href="aboutus.html">About</a></li>
-        <li><a href="book.html">Book</a></li>
+        <li><a href="faq.html">FAQ's and Sitemap</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
         <li><a href="Plans.html">Plans</a></li>
+        <li><a href="book.html">Book</a></li>
     </ul>
+    <br>
+    <br>
     <h1>BestMates Paradise</h1>
-    <img src="./IMG_0086.jpg" style="width:250px;" class="center">
+    <img src="./img.png" style="width:250px;" class="center">
     <br>
-    <br>
-    <div style="text-align: center;">
-        <h2>Make a booking</h2>
-        <form action="/action_page.php">
+    <h2 style="text-align:center">Make a booking</h2>
+    <div style="position:absolute; left:35%; width: 30%;">
+        <form onsubmit="return writeToLocalStorage()" action="./payment.html">
             <label for="petname">Pet name: </label>
             <input type="text" id="petname" name="petname"><br><br>
             <label for="species">Species: &nbsp;&nbsp;</label>
             <input type="text" id="species" name="species"><br><br>
             <label for="start">Start date: </label>
-            <input type="date" id="start" name="start">
+            <input type="date" id="start" name="start"> &nbsp;&nbsp;
             <label for="end">End date: </label>
             <input type="date" id="end" name="end">
             <br><br>
             <label for="plan">Choose a plan:</label>
             <select id="plan" name="plan">
-                <option value="plan1">Gold Plan</option>
-                <option value="plan2">Silver Plan</option>
-                <option value="plan3">Bronze Plan</option>
-                <option value="plan4">Honestly ur too poor if u dont chose from the ones above (plastic plan)</option>
+                <option value="Gold Plan">Gold Plan</option>
+                <option value="Silver Plan">Silver Plan</option>
+                <option value="Bronze Plan">Bronze Plan</option>
+                <option value="Basic Plan">Basic Plan</option>
             </select>
             <br><br>
             <input type="submit" value="Submit">
