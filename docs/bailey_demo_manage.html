@@ -62,17 +62,17 @@
     <h1>BestMates Paradise</h1>
     <img src="./img.png" style="width:250px;" class="center">
     <br>
-    <h2 style="text-align:center">Make a booking</h2>
+    <h2 style="text-align:center">Edit booking</h2>
     <div style="position:absolute; left:35%; width: 30%;">
         <form onsubmit="return writeToLocalStorage()" action="./payment.html">
             <label for="petname">Pet name: </label>
-            <input type="text" id="petname" name="petname"><br><br>
+            <input type="text" id="petname" name="petname" value="Bailey" > <br><br>
             <label for="species">Species: &nbsp;&nbsp;</label>
-            <input type="text" id="species" name="species"><br><br>
+            <input type="text" id="species" name="species" value="Dog"> <br><br>
             <label for="start">Start date: </label>
-            <input type="date" id="start" name="start"> &nbsp;&nbsp;
+            <input type="date" id="start" name="start" value="2022-07-12"> &nbsp;&nbsp;
             <label for="end">End date: </label>
-            <input type="date" id="end" name="end">
+            <input type="date" id="end" name="end"value="2022-07-16">
             <br><br>
             <label for="plan">Choose a plan:</label>
             <select id="plan" name="plan">
@@ -82,12 +82,6 @@
                 <option value="Basic Plan">Basic Plan</option>
             </select>
             <br><br>
-            <label for="vet">Your vet's name (Optional): &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-            <input type="text" id="vet" name="vet"><br><br>
-            <label for="vetNumber">Your vet's number (Optional): &nbsp;&nbsp;&nbsp;</label>
-            <input type="text" id="vetNumber" name="vetNumber"><br><br>
-            <label for="insurance">Pet insurance policy (Optional): </label>
-            <input type="text" id="insurance" name="insurance"><br><br>
             <input type="submit" value="Submit">
         </form>
     </div>
